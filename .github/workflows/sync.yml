@@ -13,9 +13,17 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-          ref: Production 
-          
+          ref: Production
+
+      - name: Remove origin to prevent accidental pushes to original repo
+        run: git remote remove origin
+
+      - name: Configure Git
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
       - name: Push to Personal Mirror
         run: |
           git remote add mirror https://x-access-token:${{ secrets.MIRROR_TOKEN }}@github.com/Zyxavy/Grocify-mirror-clone.git
-          git push --force Production:main  # Push Production branch to mirror's main
+          git push --force mirror Production:main
