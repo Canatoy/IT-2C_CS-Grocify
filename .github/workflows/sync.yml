@@ -1,0 +1,20 @@
+name: Sync to Web Mirror
+
+on:
+  push:
+    branches:
+      - staging 
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Push to Personal Mirror
+        run: |
+          git remote add mirror https://x-access-token:${{ secrets.MIRROR_TOKEN }}@github.com/FrostyFreezer/GrocifyTesting.git
+          git push --force mirror staging:main
