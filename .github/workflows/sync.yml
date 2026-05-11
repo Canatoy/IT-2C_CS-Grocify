@@ -3,7 +3,7 @@ name: Sync to Web Mirror
 on:
   push:
     branches:
-      - staging 
+      - Production 
 
 jobs:
   build:
