@@ -16,5 +16,5 @@ jobs:
 
       - name: Push to Personal Mirror
         run: |
-          git remote add mirror https://x-access-token:${{ secrets.MIRROR_TOKEN }}@github.com/FrostyFreezer/GrocifyTesting.git
+          git remote add mirror https://x-access-token:${{ secrets.MIRROR_TOKEN }}@github.com/Zyxavy/Grocify-mirror-clone.git
           git push --force mirror staging:main
