@@ -1,4 +1,5 @@
 import { Show, useClerk, useUser } from '@clerk/expo'
+import { UserButton, UserProfileView } from '@clerk/expo/native'
 import { Link } from 'expo-router'
 import { Pressable, StyleSheet, Text, View } from 'react-native'
 
@@ -22,6 +23,13 @@ export default function Page() {
         <Pressable style={styles.button} onPress={() => signOut()}>
           <Text style={styles.buttonText}>Sign out</Text>
         </Pressable>
+
+        <View style={{ width: 36, height: 36, borderRadius: 18, overflow: 'hidden' }}>
+          <UserButton />
+        </View>
+
+        <UserProfileView style={{ flex: 1 }} />
+
       </Show>
     </View>
   )
