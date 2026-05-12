@@ -1,27 +1,29 @@
-import { ClerkLoaded, ClerkProvider } from '@clerk/expo';
-import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
-import { Stack } from 'expo-router';
-import { useColorScheme } from 'react-native';
+import { ClerkProvider } from "@clerk/expo";
+import { tokenCache } from "@clerk/expo/token-cache";
+
+import { DarkTheme, DefaultTheme, ThemeProvider } from "@react-navigation/native";
+import { Stack } from "expo-router";
+import { useColorScheme } from "react-native";
+
+// @ts-ignore:
+import "../../global.css";
 
 const publishableKey = process.env.EXPO_PUBLIC_CLERK_PUBLISHABLE_KEY!;
+
+if (!publishableKey) {
+  throw new Error("Missing Publishable Key. Check Cloudflare Environment Variables.");
+}
+
 
 export default function RootLayout() {
   const colorScheme = useColorScheme();
 
-  if (!publishableKey) {
-  
-    console.error("Missing Publishable Key. Check Cloudflare Environment Variables.");
-  }
-
   return (
-    <ClerkProvider publishableKey={publishableKey}>
-      <ClerkLoaded>
-        <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-          <Stack>
-            <Stack.Screen name="index" options={{ headerShown: false }} />
-          </Stack>
+    <ClerkProvider publishableKey={publishableKey} tokenCache={tokenCache}>
+        <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
+          <Stack screenOptions={{ headerShown: false }} />
         </ThemeProvider>
-      </ClerkLoaded>
+
     </ClerkProvider>
   );
 }

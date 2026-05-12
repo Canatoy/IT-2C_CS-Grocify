@@ -13,7 +13,7 @@
     "seed:grocery": "node ./scripts/seed-grocery.cjs"
   },
   "dependencies": {
-    "@clerk/expo": "^3.1.2",
+    "@clerk/expo": "^3.2.10",
     "@neondatabase/serverless": "^1.0.2",
     "@react-navigation/bottom-tabs": "^7.7.3",
     "@react-navigation/elements": "^2.8.1",
@@ -33,7 +33,7 @@
     "expo-linear-gradient": "~55.0.8",
     "expo-linking": "~55.0.7",
     "expo-router": "~55.0.4",
-    "expo-secure-store": "^55.0.8",
+    "expo-secure-store": "^55.0.13",
     "expo-splash-screen": "~55.0.10",
     "expo-status-bar": "~55.0.4",
     "expo-symbols": "~55.0.5",
