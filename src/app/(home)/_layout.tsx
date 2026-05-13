@@ -9,7 +9,7 @@ export default function Layout() {
   }
 
   if (!isSignedIn) {
-    return <Redirect href="../(auth)/sign-in" />
+    return <Redirect href="/(auth)/sign_in" />
   }
 
   return <Stack />
