@@ -1,5 +1,5 @@
-import { useAuth } from '@clerk/expo'
-import { Redirect, Stack } from 'expo-router'
+import { useAuth } from '@clerk/expo';
+import { Redirect } from 'expo-router';
 import { NativeTabs } from 'expo-router/unstable-native-tabs';
 import { useColorScheme } from "nativewind";
 
