@@ -3,7 +3,7 @@ import ListHeroCard from '@/components/list/ListHeroCard'
 import PendingItemCard from '@/components/list/PendingItemCard'
 import TabScreenBackground from '@/components/TabScreenBackground'
 import { useGroceryStore } from '@/store/grocery-store'
-import { FlatList, Text, View } from 'react-native-reanimated/lib/typescript/Animated'
+import { FlatList, Text, View } from 'react-native'
 
 export default function ListScreen() {
   const { items } = useGroceryStore();
@@ -22,7 +22,7 @@ export default function ListScreen() {
 
         <View style={{ gap: 14, paddingTop: 20 }}>
           <TabScreenBackground />
-          
+
           <ListHeroCard />
           <View className="flex-row items-center justify-between px-1">
             <Text className="text-sm font-semibold uppercase tracking-[1px] text-muted-foreground">
