@@ -7,7 +7,7 @@
 - [x] 4 - Building Our Custom Auth Screen
 - [x] 6 - Bottom Tabs with Native Tabs
 - [x] 8 - Setting Up Our Store with Zustand
-- [ ] 9 - Building the List Screen
+- [x] 9 - Building the List Screen
 - [ ] 10 - Building the Planner Screen
 - [ ] 11 - Building the Insights Screen
 - [ ] 12 - Adding the Feedback Button

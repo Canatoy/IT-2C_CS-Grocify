@@ -29,6 +29,10 @@ export default function SignInScreen() {
           Plan smarter. Shop happier.
         </Text>
 
+        <Text className="mt-1 text-center text-[12px] text-primary-foreground/80 dark:text-foreground/75">
+          Note: ts is not designed to scale on Desktop, use mobile or minimize the tab to scale properly.
+        </Text>
+
         <View className="mt-6 rounded-[30px] border border-white/20 bg-white/10 p-3">
           <Image
             source={require("../../../assets/images/auth.png")}
