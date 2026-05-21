@@ -12,7 +12,7 @@ const SSOCallbackScreen = () => {
     return <Redirect href={"/"} />;
   }
 
-  return <Redirect href={"/(auth)/sign-in"} />;
+  return <Redirect href={"/(auth)/sign_in"} />;
 };
 
 export default SSOCallbackScreen;
